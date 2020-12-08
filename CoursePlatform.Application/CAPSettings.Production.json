@@ -1,0 +1,11 @@
+{
+  "ABPSettings": {
+    "HostName": "49.233.75.253",
+    "Password": "ABCabc0325",
+    "UserName": "rabbit_mq_user",
+    "VirtualHost": "/",
+    "ExchangeName": "CoursePlatform_Event",
+    "Port": 5672
+  }
+
+}

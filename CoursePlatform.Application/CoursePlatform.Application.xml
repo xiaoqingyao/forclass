@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoursePlatform.Application</name>
+    </assembly>
+    <members>
+        <member name="M:CoursePlatform.Application.Controllers.CatalogController.Get(CoursePlatform.Domain.Queries.Catalog.QueryParam)">
+            <summary>
+            查询目录，及目录引用的学程数 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CollabratorController.AddCollabrator(CoursePlatform.Domain.DTOS.CollabratorDTO)">
+            <summary>
+            添加课程协作者
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CollabratorController.ReplaceCollabrator(CoursePlatform.Domain.DTOS.CollabratorDTO)">
+            <summary>
+            替换课程协作者
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CollabratorController.EnableAll(CoursePlatform.Domain.Queries.Collabrator.QueryDTO)">
+            <summary>
+            查询可协作的对象
+            </summary>
+            <param name="dto">查询参数 type: 1-学校， 2-教研组</param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CollabratorController.Get(CoursePlatform.Domain.DTOS.IdDto)">
+            <summary>
+            查询已经分享的对象
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.Create(CoursePlatform.Domain.DTOS.CreateCourseDTO)">
+            <summary>
+             课程创建 
+            </summary>
+            <param name="dTO">课程数据  <see cref="T:CoursePlatform.Domain.DTOS.CreateCourseDTO"/></param>
+            <returns>
+            创建成功的ID， <see cref="T:CoursePlatform.infrastructure.Tools.ReturnVal`1"/> 
+            </returns>
+            <remarks>
+                ID为空时表示创建，反之表示修改
+            </remarks>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.Get(CoursePlatform.Domain.DTOS.Queries.GetParam)">
+            <summary>
+            获取课程信息...
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.GetDs(CoursePlatform.Domain.DTOS.Queries.GetDsParam)">
+            <summary>
+            获取课程某目录下引用的学程
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.QuoteDS(CoursePlatform.Domain.DTOS.QuoteDSDTO)">
+            <summary>
+            x引用学程
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.SetDsStatus(CoursePlatform.Domain.DTOS.DsStatusDTO)">
+            <summary>
+            设置学程状态
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.DelDs(CoursePlatform.Domain.DTOS.DsDelDTO)">
+            <summary>
+            删除学程的引用 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.SchoolReview(CoursePlatform.Domain.DTOS.IdDto)">
+            <summary>
+            校提审 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.SchoolReviewCancel(CoursePlatform.Domain.DTOS.IdDto)">
+            <summary>
+            取消校提审 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.SchoolPass(CoursePlatform.Domain.DTOS.AuditDTO)">
+            <summary>
+            校审核通过 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.SchoolReject(CoursePlatform.Domain.DTOS.AuditDTO)">
+            <summary>
+            校审核拒绝
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.ListToSchool(CoursePlatform.Domain.DTOS.AuditDTO)">
+            <summary>
+            学校上架
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.ListToSchoolRemove(CoursePlatform.Domain.DTOS.AuditDTO)">
+            <summary>
+            学校上架
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.RegionReview(CoursePlatform.Domain.DTOS.IdDto)">
+            <summary>
+            区域提审 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.RegionReviewCancel(CoursePlatform.Domain.DTOS.IdDto)">
+            <summary>
+            取消区域提审 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.RegionPass(CoursePlatform.Domain.DTOS.AuditDTO)">
+            <summary>
+            区域审核通过 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.RegionReject(CoursePlatform.Domain.DTOS.AuditDTO)">
+            <summary>
+            区域审核拒绝
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.ListToRegion(CoursePlatform.Domain.DTOS.AuditDTO)">
+            <summary>
+            区域上架
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.ListToRegionRemove(CoursePlatform.Domain.DTOS.AuditDTO)">
+            <summary>
+            学校上架
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.Delete(CoursePlatform.Domain.DTOS.IdDto)">
+            <summary>
+            删除课程 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+            <remarks>
+             只有在草稿、校拒绝、校提审状态才可以删除 
+            </remarks>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.CourseController.UpdateDsItem(CoursePlatform.Domain.DTOS.UpdateDsDTO)">
+            <summary>
+            更新指定引用学程的基本信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.OpenApiController.GetList(CoursePlatform.Domain.Queries.OpenApi.ReqDTO)">
+            <summary>
+            查询课程 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.PlatforUserController.Join(CoursePlatform.Domain.DTOS.UserJoinDTO)">
+            <summary>
+            加入学习
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.PlatforUserController.Leavel(CoursePlatform.Domain.DTOS.IdDto)">
+            <summary>
+            取消加入学习的学程
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.QueryController.QueryFilter(CoursePlatform.Domain.DTOS.Queries.FilterParam)">
+            <summary>
+            获取查询条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.QueryController.GetTagProp">
+            <summary>
+            获取查询条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.QueryController.CourseStatusDict">
+            <summary>
+            课程状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.QueryController.CourseEnableStatusDict">
+            <summary>
+            根据角色获取可以用来筛选的课程状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.QueryController.CreateStatus">
+            <summary>
+            课程创建页面可用的筛选状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.QueryController.CourseList(CoursePlatform.Domain.DTOS.Queries.CourseParamters)">
+             <summary>
+             课程列表 
+             </summary>
+             <remarks>
+              按功能设置参数:queryType -> 's':学生学习， 'a':审核， 'c':教师创建 
+            
+              当为’a'时，orgId 必须大于0 ，为学校Id或区域Id
+            
+               orgType: s -> 学校， r -> 区域
+             
+             ```
+              合作伙伴首页 : qeuryType=&amp;orgType={s or r}&amp;orgId={学校Id or 区域Id}&amp;orderBy=n
+             ```
+             ```
+              学习课程： queryType=s
+             ```
+             
+             ```
+              创建课程： qureyType=c
+             ```
+            
+             ```
+              审核课程:  queryType=a&amp;orgId={学校 or 区域Id}
+             ```
+             </remarks>
+             <param name="param"></param>
+             <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.QueryController.CourseFilterCount(CoursePlatform.Domain.DTOS.Queries.CourseParamters)">
+            <summary>
+            筛选后查询出的课程总数
+            </summary>
+            <remarks>
+             参数同  ```course_list``` 一致
+            </remarks>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.ToolsController.RemoveCahce(CoursePlatform.Domain.DTOS.IdDto)">
+            <summary>
+            移除缓存 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Application.Controllers.ToolsController.SysConf(CoursePlatform.Domain.DTOS.SysConfigDTO)">
+            <summary>
+            系统数据配置 
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

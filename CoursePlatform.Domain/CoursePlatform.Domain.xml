@@ -1,0 +1,775 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoursePlatform.Domain</name>
+    </assembly>
+    <members>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.Course.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.Course.SignatureId">
+            <summary>
+            署名ID  如果大于零为教研组，反之为自签
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.Course.Goal">
+            <summary>
+            目标
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.Course.Region">
+            <summary>
+            区域
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.Course.School">
+            <summary>
+            学校
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.Course.Creator">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.Course.DsItems">
+            <summary>
+            引用的学程
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.Course.CollaboratorLib">
+            <summary>
+            协作者
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.Course.Leaner">
+            <summary>
+            加入学习的对象
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.Course.GradeCode">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="F:CoursePlatform.Domain.Core.CourseAggregate.CourseStatus.Draft">
+            <summary>
+            草稿
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.QuoteDSVal.IsOriginal">
+            <summary>
+            是否原创
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.Core.CourseAggregate.TagVal">
+            <summary>
+            课程署名
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.CourseAggregate.TagVal.Id">
+            <summary>
+            如果Id > 0 教研组, 反之 自签
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.PartnerAggregate.Partner.ResourceId">
+            <summary>
+            对应资源接口的ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.PartnerAggregate.Partner.ParentId">
+            <summary>
+            上级单位Id
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.Core.PlatformUserAggregate.ListedVal">
+            <summary>
+            已经上架人的课程
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.PlatformUserAggregate.PlatformUser.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.PlatformUserAggregate.PlatformUser.SchoolId">
+            <summary>
+            所属学校ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.PlatformUserAggregate.PlatformUser.SectionId">
+            <summary>
+            区域Id
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.PlatformUserAggregate.PlatformUser.ListedCourse">
+            <summary>
+            已上架的商品
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Core.PlatformUserAggregate.PlatformUser.StdJoined">
+            <summary>
+            加入学习的学生数
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.IdSetter">
+            <summary>
+            Id Generator
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.MapperSetter">
+            <summary>
+            Automapper
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.DTOS.CollabratorDTO">
+            <summary>
+            分享给教师数据
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CollabratorDTO.CourseId">
+            <summary>
+            要分享的学习设计ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CollabratorDTO.GradeObjs">
+            <summary>
+            要分享的学校教师对象   班级 > 教师
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CollabratorDTO.CommunityObjs">
+            <summary>
+            要分享的教研组对象... 教研组 > 角色 > 教师
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.DTOS.CollabratorSchoolDTO">
+             <summary>
+             要分享的对象信息 OrgId -> id
+             
+             </summary>
+             <remarks>
+                  *   "SharedObjs": [
+            {
+              "rootId": "string", -- 根节点Id，教研组代表教研组的ID，学校时代表年级的ID
+              "rootName": "string",-- 根节点名称，学校代表教研组的名称，学校时代表年级的名称
+              "id": "string", -- 教师ID
+              "name": "string", -- 教师名称
+              "orgId": "string", -- 教研组时角色ID，学习时班级Id 
+              "orgName": "string" -- 教研组时角色名称，学习时班级名称
+            }
+             </remarks>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CollabratorSchoolDTO.ObjId">
+            <summary>
+            对象ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CollabratorSchoolDTO.ObjName">
+            <summary>
+            对象名称
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CollabratorSchoolDTO.OrgId">
+            <summary>
+            班级或角色ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CollabratorSchoolDTO.OrgName">
+            <summary>
+            班级或角色名称 
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.DTOS.CollbratorObjDTO">
+            <summary>
+            RootId -> OrgId -> id
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CollbratorObjDTO.RootId">
+            <summary>
+            根节点ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CollbratorObjDTO.RootName">
+            <summary>
+            根节点名称
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.DTOS.CreateCourseDTO">
+            <summary>
+            创建课程参数
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CreateCourseDTO.Id">
+            <summary>
+            空为创建 反之修改
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CreateCourseDTO.Name">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CreateCourseDTO.SignatureId">
+            <summary>
+            署名ID  如果大于零为教研组，反之为自签
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CreateCourseDTO.SignatureName">
+            <summary>
+            署名
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CreateCourseDTO.CoverUrl">
+            <summary>
+            封面路径
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CreateCourseDTO.CatalogId">
+            <summary>
+            目录Id结构  1/1/1/1/1
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CreateCourseDTO.CatalogName">
+            <summary>
+            目录名称结构 目录/目录/目录
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CreateCourseDTO.Intro">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.CreateCourseDTO.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.DTOS.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Tag.Id">
+            <summary>
+             标签属性ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Tag.Name">
+            <summary>
+            标签属性名
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Tag.Items">
+            <summary>
+            标签数组
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.DTOS.TagDTOItem">
+            <summary>
+            单个标签属性
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.TagDTOItem.Id">
+            <summary>
+            标签ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.TagDTOItem.Name">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.TagDTOItem.TypeName">
+            <summary>
+            标签所属类型名称： 版本、学科、年级 etc.........
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.DsDelDTO.CourseId">
+            <summary>
+            课程ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.DsDelDTO.CatalogId">
+            <summary>
+            目录ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.DsDelDTO.DsId">
+            <summary>
+            学程ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.DsStatusDTO.CourseId">
+            <summary>
+            课程ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.DsStatusDTO.DsId">
+            <summary>
+            学程ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.DsStatusDTO.CatalogId">
+            <summary>
+            目录ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.DsStatusDTO.IsOpen">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Queries.CourseParamters.Status">
+            <summary>
+            状态
+            1：草稿
+            2: 校审核
+            3： 全部 = 草稿|校审核  = 1|2
+            16: 校上架
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Queries.CourseParamters.StartDate">
+            <summary>
+            开始日期 格式:yyyy-MM-dd
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Queries.CourseParamters.EndDate">
+            <summary>
+            结束日期 格式：yyyy-MM-dd
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Queries.CourseParamters.QueryType">
+            <summary>
+            查询类型: t: 老师， s: 学用， a: 审核用
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Queries.CourseParamters.OrgId">
+            <summary>
+            组织Id
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Queries.CourseParamters.OrgType">
+            <summary>
+            组织类型 s:学校，r:区域
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Queries.IFilterParam.QueryType">
+            <summary>
+            查询类型: t: 老师， s: 学用， a: 审核用
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Queries.IFilterParam.OrgId">
+            <summary>
+            组织Id
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.Queries.IFilterParam.OrgType">
+            <summary>
+            组织类型 s:学校，r:区域
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.QuoteDSDTO.CatalogId">
+            <summary>
+            所属目录ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.QuoteDSDTO.CourseId">
+            <summary>
+            课程ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.QuoteDSDTO.Items">
+            <summary>
+            所含学程
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.QuoteDSDTOItem.DsId">
+            <summary>
+            引用的学程ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.QuoteDSDTOItem.DsName">
+            <summary>
+            学程名称
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.QuoteDSDTOItem.Cover">
+            <summary>
+            学程封面
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.QuoteDSDTOItem.IsOpen">
+            <summary>
+            是否公开
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.QuoteDSDTOItem.IsShared">
+            <summary>
+            是否已共享
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.QuoteDSDTOItem.IsOriginal">
+            <summary>
+            是否原创
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.UpdateDsDTO.CourseId">
+            <summary>
+            课程ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.UpdateDsDTO.CatalogId">
+            <summary>
+            目录ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.DTOS.UpdateDsDTO.Item">
+            <summary>
+            要修改学程信息
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Permission.CourseOperation.SchoolOperation">
+            <summary>
+            当前用户可执行的校审核操作
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Permission.CourseOperation.RegionOperation">
+            <summary>
+            当前用户可执行的区域操作
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Permission.CourseOperation.PersonalOperation">
+            <summary>
+            当前用户执行的个人操作
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Permission.CourseOperation.AllOperations">
+            <summary>
+            全部操作
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Permission.CourseOperation.IsCreator">
+            <summary>
+            是否是创建者
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Permission.CourseOperation.IsCollabrator">
+            <summary>
+            是否是协作者
+            </summary>
+        </member>
+        <member name="M:CoursePlatform.Domain.Queries.Collabrator.CollabratorQuery.EnableComunity(CoursePlatform.Data.EFProvider.Paging.IPaginate{CoursePlatform.Data.Entities.CollabratorEntity})">
+            <summary> 
+             教育组可用对象
+            </summary>
+            <param name="shared"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Domain.Queries.Collabrator.CollabratorQuery.EnableAsync(CoursePlatform.Domain.Queries.Share.CollabratorType,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CoursePlatform.Domain.Queries.Collabrator.CollabratorQuery.GetAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CoursePlatform.Domain.Queries.Collabrator.ICollabratorQuery.EnableAsync(CoursePlatform.Domain.Queries.Share.CollabratorType,System.String)">
+            <summary>
+            可以分享的教师 
+            </summary>
+            <param name="type"></param>
+            <param name="dsId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoursePlatform.Domain.Queries.Collabrator.ICollabratorQuery.GetAsync(System.String)">
+            <summary>
+            已经分享的教师
+            </summary>
+            <param name="dsId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.Collabrator.QueryDTO.CourseId">
+            <summary>
+            要协作的课程ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.Collabrator.QueryDTO.Type">
+            <summary>
+            可协作的对象1:学校, 2:教研组
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.Queries.Collabrator.QueryCollabratorVO">
+            <summary>
+            已经分享的对象
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.Collabrator.QueryCollabratorVO.CommunityObj">
+            <summary>
+            教研组
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.Collabrator.QueryCollabratorVO.SchoolObj">
+            <summary>
+            学校
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.Queries.Collabrator.TeacherVO">
+            <summary>
+            教师信息
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.Collabrator.TeacherVO.Id">
+            <summary>
+            教师ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.Collabrator.TeacherVO.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.Collabrator.TeacherVO.Children">
+            <summary>
+            子级
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.Queries.OpenApi.ReqDTO">
+            <summary>
+            请求参数
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.ReqDTO.PageSize">
+            <summary>
+            页大小
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.ReqDTO.PageNum">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.ReqDTO.OrgId">
+            <summary>
+            区域
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.GetCourseListRsp.Courses">
+            <summary>
+            课程信息
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.GetCourseListRsp.Totalcount">
+            <summary>
+            课程总数
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.CourseInfo.Id">
+            <summary>
+            课程Id
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.CourseInfo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.CourseInfo.Desc">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.CourseInfo.CreateId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.CourseInfo.CreateName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.CourseInfo.LessonCount">
+            <summary>
+            课时数
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.CourseInfo.Status">
+            <summary>
+            状态
+            </summary>
+            <remarks>
+                  "区域上架": 80
+            </remarks>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.CourseInfo.GradeIds">
+            <summary>
+            造用年级
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.CourseInfo.JoinCount">
+            <summary>
+            加入人数
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.CourseInfo.FinishCount">
+            <summary>
+            完成人数，（无数据）
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.Queries.OpenApi.CourseInfo.Cover">
+            <summary>
+            封面
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.Queries.Share.CollabratorType">
+            <summary>
+            查询方式 1： 学校 2: 教研组
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CoursePagingVO.Id">
+            <summary>
+            课程ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CoursePagingVO.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CoursePagingVO.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CoursePagingVO.SignatureName">
+            <summary>
+            署名
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CoursePagingVO.SchoolName">
+            <summary>
+            创建者学校Id
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CoursePagingVO.CoverUrl">
+            <summary>
+            封面
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CoursePagingVO.Status">
+            <summary>
+            状态值
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CoursePagingVO.RegionStatus">
+            <summary>
+            区域审核状态..
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CoursePagingVO.LearnerCount">
+            <summary>
+            加入学习的人数
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CourseVO.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CourseVO.SignatureName">
+            <summary>
+            署名
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CourseVO.CoverUrl">
+            <summary>
+            封面地址
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CourseVO.CatalogId">
+            <summary>
+            目录
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CourseVO.Intro">
+            <summary>
+            介绍
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CourseVO.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CourseVO.LeanerCount">
+            <summary>
+            加入学习的人数
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CourseVO.IsJoined">
+            <summary>
+            是否加入学习
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.CourseVO.RegionStatus">
+            <summary>
+            区域审核状态..
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.VO.DsItemVO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.DsItemVO.IsOriginal">
+            <summary>
+            是否原创
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.VO.TagVO">
+            <summary>
+            课程署名
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.TagVO.Id">
+            <summary>
+            如果Id
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.VO.QuerySharedVO">
+            <summary>
+            已经分享的对象
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.QuerySharedVO.CommunityObj">
+            <summary>
+            教研组
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.QuerySharedVO.SchoolObj">
+            <summary>
+            学校
+            </summary>
+        </member>
+        <member name="T:CoursePlatform.Domain.VO.TeacherVO">
+            <summary>
+            教师信息
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.TeacherVO.Id">
+            <summary>
+            教师ID
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.TeacherVO.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:CoursePlatform.Domain.VO.TeacherVO.Children">
+            <summary>
+            子级
+            </summary>
+        </member>
+    </members>
+</doc>

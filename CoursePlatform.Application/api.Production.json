@@ -1,0 +1,38 @@
+{
+  "ApiOptions": {
+    "UserHostBase": "http://test.api.forclass.net/",
+    //基本信息
+    "UserSessionUriPart": "UserCenter/Account/LoginSession",
+    //角色
+    "UserRoleUrlPart": "UserCenter/AccountProfile/GetUserRole/",
+    //组织架构
+    "UserOrganizationUriPart": "UserCenter/AccountProfile/GetUserOrganization/",
+
+    //班级学生
+    "UriPartGetStudents": "UserCenter/AccountProfile/GetStudentsByClass/",
+
+    //教研组信息
+    "CommunityUrlPart": "UserCenter/AccountProfile/GetUserCommunity",
+
+
+    //组织结构下教师
+    "TeacherListByOrg": "UserCenter/AccountProfile/GetAccountTeacherList",
+
+    //教研组下教师
+    "ComunityUserUrlPart": "UserCenter/AccountProfile/GetMembersByCommunity",
+
+
+    //班级下所有教师
+    "TeacherByClassUrlPart": "UserCenter/AccountProfile/GetTeachersByClass",
+
+    //获取教师-按班级分组
+    "TeacherGroupClassUrlPart": "UserCenter/AccountProfile/GetTeacherGroupClass",
+
+    //班级分组信息
+    "ClassGroupUrlPart": "UserCenter/System/GetClassInfoGroupGrade",
+    //获取目录Api
+    "CatalogUrl": "http://test.ws.forclass.net/GooseService.asmx/GetGooseTextbookLocation4Course"
+
+  }
+
+}

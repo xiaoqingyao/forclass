@@ -1,0 +1,11 @@
+{
+  "ABPSettings": {
+    "HostName": "127.0.0.1",
+    "Password": "guest",
+    "UserName": "guest",
+    "VirtualHost": "/",
+    "ExchangeName": "CoursePlatform_Event",
+    "Port": 5672
+  }
+}
+
